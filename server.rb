@@ -1,7 +1,7 @@
 require 'webrick'
 require 'securerandom'
 
-server = WEBrick::HTTPServer.new :Port => 5000
+server = WEBrick::HTTPServer.new :Port => ENV.fetch('PORT'){ 5000 }
 
 #Return a successful Hello World response.
 server.mount_proc '/' do |request, response|

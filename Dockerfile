@@ -1,4 +1,4 @@
-FROM ruby:2.4.0-alpine
+FROM ruby:2.4.1-alpine
 ADD ./ /app/
 WORKDIR /app
 ENV PORT 5000
