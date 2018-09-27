@@ -6,7 +6,27 @@ server = WEBrick::HTTPServer.new :Port => ENV.fetch('PORT'){ 5000 }
 #Return a successful Hello World response.
 server.mount_proc '/' do |_request, response|
   #TODO: use HTML
-  response.body = 'Hello From SecondBranch!'
+  response.body = '
+  <HTML>
+  <HEAD></HEAD>
+  <BODY>
+  <TABLE>
+  <TR>
+    <TD>User Name</TD>
+    <TD><INPUT type="text"></TD>
+  </TR>
+
+  <TR>
+    <TD>Password</TD>
+    <TD><INPUT type="text"></TD>
+  </TR>
+  <TR>
+    <TD><button type="button">Login</button></TD>
+  </TR>
+
+  </TABLE>
+  </BODY>
+  </HTML>'
   sleep 0.125 + SecureRandom.random_number*0.250
 end
 
