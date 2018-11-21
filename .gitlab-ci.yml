@@ -14,8 +14,9 @@ stages:
   - review
   - staging
   - canary
-  - production
+  - promotion
   - cleanup
+  - production
 
 build:
   stage: build
@@ -24,19 +25,8 @@ build:
   only:
     - branches
 
-canary:
-  stage: canary
-  script:
-    - command canary
-  environment:
-    name: prodblue
-    url: http://$CI_PROJECT_PATH_SLUG-prod-blue.$KUBE_DOMAIN
-  when: manual
-  only:
-    - master
-
-blue:
-  stage: production
+UAT:
+  stage: promotion
   script:
     - command deploy
   environment:
@@ -46,14 +36,25 @@ blue:
   only:
     - master
 
-green:
-  stage: production
+Performance:
+  stage: promotion
   script:
     - command deploy
   environment:
     name: prodgreen
     url: http://$CI_PROJECT_PATH_SLUG-green.$KUBE_DOMAIN
   #when: manual
+  only:
+    - master
+    
+Final Production:
+  stage: production
+  script:
+    - command deploy
+  environment:
+    name: f_production
+    url: http://$CI_PROJECT_PATH_SLUG-production.$KUBE_DOMAIN
+  when: manual
   only:
     - master
 
