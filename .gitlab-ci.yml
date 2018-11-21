@@ -33,8 +33,7 @@ UAT:
     name: prodblue
     url: http://$CI_PROJECT_PATH_SLUG-prod-blue.$KUBE_DOMAIN
   #when: manual
-  only:
-    - master
+
 
 Performance:
   stage: promotion
@@ -44,8 +43,7 @@ Performance:
     name: prodgreen
     url: http://$CI_PROJECT_PATH_SLUG-green.$KUBE_DOMAIN
   #when: manual
-  only:
-    - master
+
     
 Final Production:
   stage: production
@@ -55,47 +53,7 @@ Final Production:
     name: f_production
     url: http://$CI_PROJECT_PATH_SLUG-production.$KUBE_DOMAIN
   when: manual
-  only:
-    - master
 
-staging:
-  stage: staging
-  script:
-    - command deploy
-  environment:
-    name: staging
-    url: http://$CI_PROJECT_PATH_SLUG-staging.$KUBE_DOMAIN
-  only:
-    - master
-
-review:
-  stage: review
-  script:
-    - command deploy
-  environment:
-    name: review/$CI_COMMIT_REF_NAME
-    url: http://$CI_PROJECT_PATH_SLUG-$CI_ENVIRONMENT_SLUG.$KUBE_DOMAIN
-    on_stop: stop_review
-  only:
-    - branches
-  except:
-    - master
-
-stop_review:
-  stage: cleanup
-  variables:
-    GIT_STRATEGY: none
-  script:
-    - command destroy
-  environment:
-    name: review/$CI_COMMIT_REF_NAME
-    action: stop
-  when: manual
-  allow_failure: true
-  only:
-    - branches
-  except:
-    - master
 
 sast:
   stage: test 
