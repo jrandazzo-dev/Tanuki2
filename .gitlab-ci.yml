@@ -42,7 +42,7 @@ blue:
   environment:
     name: prodblue
     url: http://$CI_PROJECT_PATH_SLUG-prod-blue.$KUBE_DOMAIN
-  #when: manual
+  when: manual
   only:
     - master
 
@@ -53,7 +53,7 @@ green:
   environment:
     name: prodgreen
     url: http://$CI_PROJECT_PATH_SLUG-green.$KUBE_DOMAIN
-  #when: manual
+  when: manual
   only:
     - master
 
