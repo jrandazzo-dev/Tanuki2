@@ -1,0 +1,7 @@
+plugins:
+  engines:
+    pmd:
+      enabled: true
+exclude_patterns:
+- ".sfdx"
+- "node_modules"
