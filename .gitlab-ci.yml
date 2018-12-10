@@ -95,6 +95,7 @@ container_scanning:
   services:
     - docker:stable-dind
   script:
+    - export DOCKER_HOST=tcp://localhost:2375
     - docker run -d --name db arminc/clair-db:latest
     - docker run -p 6060:6060 --link db:postgres -d --name clair --restart on-failure arminc/clair-local-scan:v2.0.1
     - apk add -U wget ca-certificates
