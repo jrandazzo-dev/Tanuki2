@@ -45,6 +45,19 @@ blue:
   when: manual
   only:
     - master
+    
+yellow:
+  stage: production
+  script:
+    - echo $CI_ENVIRONMENT_SLUG
+    - echo $KUBE_NAMESPACE
+  environment:
+    name: prodyellow
+    url: http://$CI_PROJECT_PATH_SLUG-prod-yellow.$KUBE_DOMAIN
+  when: manual
+  only:
+    - master    
+    
 
 green:
   stage: production
