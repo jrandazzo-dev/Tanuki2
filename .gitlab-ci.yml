@@ -46,17 +46,17 @@ blue:
   only:
     - master
     
-yellow:
-  stage: production
-  script:
-    - echo $CI_ENVIRONMENT_SLUG
-    - echo $KUBE_NAMESPACE
-  environment:
-    name: sandbox
-    url: https://docs.dev.goromasamu.net
-  when: manual
-  only:
-    - master    
+#yellow:
+  #stage: production
+  #script:
+   # - echo $CI_ENVIRONMENT_SLUG
+   # - echo $KUBE_NAMESPACE
+  #environment:
+  #  name: sandbox
+   # url: https://docs.dev.goromasamu.net
+  #when: manual
+ # only:
+  #  - master    
     
 
 green:
