@@ -6,7 +6,6 @@ image: registry.gitlab.com/gitlab-examples/kubernetes-deploy
 variables:
   # Application deployment domain
   # KUBE_DOMAIN: domain.example.com
-  name="$CI_ENVIRONMENT_SLUG"
 
 stages:
   - build
@@ -53,8 +52,8 @@ yellow:
     - echo $CI_ENVIRONMENT_SLUG
     - echo $KUBE_NAMESPACE
   environment:
-    name: $name
-    url: http://$CI_PROJECT_PATH_SLUG-prod-yellow.$KUBE_DOMAIN
+    name: sandbox
+    url: https://docs.dev.goromasamu.net
   when: manual
   only:
     - master    
