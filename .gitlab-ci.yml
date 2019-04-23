@@ -13,7 +13,7 @@ stages:
   - doc
   - review
   - staging
-  - canary
+#  - canary
   - production
   - cleanup
 
@@ -24,16 +24,16 @@ build:
   only:
     - branches
 
-canary:
-  stage: canary
-  script:
-    - command canary
-  environment:
-    name: prodblue
-    url: http://$CI_PROJECT_PATH_SLUG-prod-blue.$KUBE_DOMAIN
-  when: manual
-  only:
-    - master
+#canary:
+#  stage: canary
+#  script:
+#    - command canary
+#  environment:
+#    name: prodblue
+#    url: http://$CI_PROJECT_PATH_SLUG-prod-blue.$KUBE_DOMAIN
+#  when: manual
+#  only:
+#    - master
 
 blue:
   stage: production
