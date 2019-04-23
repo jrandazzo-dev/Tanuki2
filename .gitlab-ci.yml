@@ -139,10 +139,10 @@ sast:
   script:
     - exit 0
 
-rspec-mysql-unit-test:
-  stage: test
-  script:
-    - exit 0
+#rspec-mysql-unit-test:
+#  stage: test
+#  script:
+#    - exit 0
 
 rspec-postgres-unit-test:
   stage: test
@@ -159,10 +159,10 @@ simplecov-code-coverage:
   script:
     - exit 0
 
-cucumber-mysql-acceptance-test:
-  stage: test
-  script:
-    - exit 0
+#cucumber-mysql-acceptance-test:
+#  stage: test
+#  script:
+#    - exit 0
 
 cucumber-postgres-acceptance-test:
   stage: test
