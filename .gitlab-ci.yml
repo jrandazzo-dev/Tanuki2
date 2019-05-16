@@ -144,30 +144,30 @@ sast:
 #  script:
 #    - exit 0
 
-rspec-postgres-unit-test:
-  stage: test
-  script:
-    - exit 0
+#rspec-postgres-unit-test:
+#  stage: test
+#  script:
+#    - exit 0
     
 coveralls-integration-test:
   stage: test
   script:
     - exit 0
 
-simplecov-code-coverage:
-  stage: test
-  script:
-    - exit 0
+#simplecov-code-coverage:
+#  stage: test
+#  script:
+#    - exit 0
 
 #cucumber-mysql-acceptance-test:
 #  stage: test
 #  script:
 #    - exit 0
 
-cucumber-postgres-acceptance-test:
-  stage: test
-  script:
-    - exit 0
+#cucumber-postgres-acceptance-test:
+#  stage: test
+#  script:
+#    - exit 0
 
 rubocop-static-analysis-test:
   stage: test
