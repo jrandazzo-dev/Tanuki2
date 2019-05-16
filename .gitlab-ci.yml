@@ -174,7 +174,7 @@ rubocop-static-analysis-test:
   script:
     - exit 0
 
-tanuki-docs:
-  stage: doc
-  script:
-    - exit 0
+#tanuki-docs:
+#  stage: doc
+#  script:
+#    - exit 0
