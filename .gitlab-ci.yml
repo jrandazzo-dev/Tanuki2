@@ -10,7 +10,7 @@ variables:
 stages:
   - build
   - test
-  - doc
+#  - doc
   - review
   - staging
 #  - canary
