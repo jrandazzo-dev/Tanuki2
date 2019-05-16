@@ -134,10 +134,10 @@ stop_review:
   except:
     - master
 
-sast:
-  stage: test 
-  script:
-    - exit 0
+#sast:
+#  stage: test 
+#  script:
+#    - exit 0
 
 #rspec-mysql-unit-test:
 #  stage: test
