@@ -5,7 +5,8 @@ image: registry.gitlab.com/gitlab-examples/kubernetes-deploy
 
 variables:
   # Application deployment domain
-   KUBE_DOMAIN: 34.73.159.174.nip.io
+  # KUBE_DOMAIN: 34.73.159.174.nip.io
+  KUBE_DOMAIN: demo.i2p.online
 
 stages:
   - build
