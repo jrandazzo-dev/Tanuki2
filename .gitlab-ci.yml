@@ -139,9 +139,9 @@ stop_review:
     - master
 
 dast:
-#  stage: dast 
-#  script:
-#    - exit 0
+  stage: dast 
+  script:
+    - exit 0
 
 #rspec-mysql-unit-test:
 #  stage: test
