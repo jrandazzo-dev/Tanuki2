@@ -162,15 +162,15 @@ container_scan:
   script:
     - exit 0
 
-#cucumber-mysql-acceptance-test:
-#  stage: test
-#  script:
-#    - exit 0
+dependancy_scan:
+  stage: test
+  script:
+    - exit 0
 
-#cucumber-postgres-acceptance-test:
-#  stage: test
-#  script:
-#    - exit 0
+license_mgmt:
+  stage: test
+  script:
+    - exit 0
 
 sast:
   stage: test
