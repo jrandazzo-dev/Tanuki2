@@ -39,7 +39,7 @@ build:
 #  only:
 #    - master
 
-blue:
+blue_50%:
   stage: production
   script:
     - command deploy
@@ -63,7 +63,7 @@ blue:
   #  - master    
     
 
-green:
+green_50%:
   stage: production
   script:
     - command deploy
