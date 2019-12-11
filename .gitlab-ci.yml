@@ -152,15 +152,15 @@ stop_review:
 #  script:
 #    - exit 0
     
-coveralls-integration-test:
+code_quality:
   stage: test
   script:
     - exit 0
 
-#simplecov-code-coverage:
-#  stage: test
-#  script:
-#    - exit 0
+container_scan:
+  stage: test
+  script:
+    - exit 0
 
 #cucumber-mysql-acceptance-test:
 #  stage: test
@@ -172,7 +172,7 @@ coveralls-integration-test:
 #  script:
 #    - exit 0
 
-rubocop-static-analysis-test:
+sast:
   stage: test
   script:
     - exit 0
