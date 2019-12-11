@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Replace ***yourPersonalTokenHere***, ***yourProjectIDHere*** and ***yourKubeDomainHere*** below:
+
 curl --request POST --header "PRIVATE-TOKEN: ***yourPersonalTokenHere***" "https://gitlab.demo.i2p.online/api/v4/projects/***yourProjectIDHere***/variables" --form "key=CODE_QUALITY_DISABLED" --form "value=true"
 curl --request POST --header "PRIVATE-TOKEN: ***yourPersonalTokenHere***" "https://gitlab.demo.i2p.online/api/v4/projects/***yourProjectIDHere***/variables" --form "key=CONTAINER_SCANNING_DISABLED" --form "value=true"
 curl --request POST --header "PRIVATE-TOKEN: ***yourPersonalTokenHere***" "https://gitlab.demo.i2p.online/api/v4/projects/***yourProjectIDHere***/variables" --form "key=DAST_DISABLED" --form "value=true"
