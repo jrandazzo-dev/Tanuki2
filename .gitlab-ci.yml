@@ -16,6 +16,7 @@ stages:
 #  - doc
   - review
   - staging
+  - dast
 #  - canary
   - production
   - cleanup
@@ -73,7 +74,7 @@ green:
   only:
     - master
 
-staging:
+review_app:
   stage: staging
   script:
     - command deploy
@@ -137,8 +138,8 @@ stop_review:
   except:
     - master
 
-#sast:
-#  stage: test 
+dast:
+#  stage: dast 
 #  script:
 #    - exit 0
 
