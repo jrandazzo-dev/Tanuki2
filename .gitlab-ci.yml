@@ -25,8 +25,6 @@ build:
   stage: build
   script:
     - command build
-  only:
-    - branches
 
 #canary:
 #  stage: canary
