@@ -3,6 +3,4 @@ stages:
 
 job1:
   stage: build
-  script: "echo execute-script-for-job2"
-  only:
-  - external_pull_requests
+  script: "exit 1"
